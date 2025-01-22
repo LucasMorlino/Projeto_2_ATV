@@ -34,7 +34,7 @@ header h1{
 
 form{
     display: flex;
-    max-width: 1000px;
+    max-width: 1250px;
     width: 100%;
     justify-content: space-between;
     margin-bottom: 56px;
