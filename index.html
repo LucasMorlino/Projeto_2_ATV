@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Telefonica</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <div class ="container">
+        <header>
+            <img src="./images/agenda.png" alt="Agenda Telefonica">
+            <h1>Meus Contatos</h1>
+        </header>
+        <form id="form-contatos">
+            <input type="text" id="nome-contato" required placeholder="Nome do Contato" />
+            <input type="tel" id="tel-contato" required placeholder="Telefone" onkeypress="return event.charCode >= 48 && event.charCode <= 57" oninvalid="this.setCustomValidity('Formato correto: (00) 12345-6789')" />
+            <span class="error-message" id="telefone-error"></span>
+            <select id="escolha-gen">
+                <option value="" selected disabled>Selecione uma opção</option>
+                <option value="Homem">Homem</option>
+                <option value="Mulher">Mulher</option>
+            </select>
+            <button type="submit">Adicionar +</button>
+        </form>
+        <table cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Nome do Contato</th>
+                    <th>Telefone do Contato</th>
+                    <th><img src="./images/casal.png" alt="Casal"></th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Total de contatos</td>
+                    <td id="total-contatos">---</td>
+                    <td><img src="./images/casal.png" alt="Casal"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
